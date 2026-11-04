@@ -3,7 +3,15 @@
 import { useState } from 'react';
 import { BatteryLow, Bot, Clock, Coins, ListChecks, MessagesSquare, ShieldCheck, type LucideIcon } from 'lucide-react';
 import { Reveal } from '@/components/ui/reveal';
-import { eyebrow, sectionHeading, sectionWrap } from '@/lib/styles';
+import {
+  darkEyebrow,
+  darkGlassCard,
+  darkSectionBase,
+  darkSectionBodySm,
+  darkSectionHeading,
+  darkSectionOverlay,
+  sectionWrap,
+} from '@/lib/styles';
 
 const FEATURES: { icon: LucideIcon; title: string; body: string }[] = [
   {
@@ -43,11 +51,11 @@ const BOUNDARIES = ['Slow replies preferred', 'Low battery today', 'Open to a ca
 function VerificationShield() {
   return (
     <div className="relative mx-auto flex h-64 w-64 items-center justify-center [perspective:900px]">
-      <div className="absolute inset-6 rounded-full bg-saffron-100/80 blur-3xl" aria-hidden="true" />
+      <div className="absolute inset-6 rounded-full bg-lotus-rose/20 blur-3xl" aria-hidden="true" />
       <div className="relative flex h-44 w-44 items-center justify-center rounded-[44px] bg-lotus-white shadow-[0_40px_60px_-30px_rgba(114,84,93,0.5)] ring-1 ring-saffron-400/50 transition-transform duration-700 ease-out [transform-style:preserve-3d] hover:[transform:rotateY(18deg)_rotateX(-8deg)]">
         <ShieldCheck className="h-16 w-16 text-kumkum-600" strokeWidth={1.25} aria-hidden="true" />
       </div>
-      <p className="absolute bottom-0 rounded-full bg-lotus-white px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-lotus-brown shadow-sm">
+      <p className="absolute bottom-0 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-lotus-white shadow-sm">
         Aadhaar verified through DigiLocker
       </p>
     </div>
@@ -64,12 +72,12 @@ function LivingBoundaries() {
   };
 
   return (
-    <div className="rounded-[28px] bg-lotus-petal p-8 sm:p-10">
+    <div className={`${darkGlassCard} p-8 sm:p-10`}>
       <div className="flex items-center gap-3">
-        <BatteryLow className="h-5 w-5 text-kumkum-600" aria-hidden="true" />
-        <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-lotus-mauve">Living boundaries</p>
+        <BatteryLow className="h-5 w-5 text-saffron-100" aria-hidden="true" />
+        <p className={`${darkEyebrow} tracking-[0.2em]`}>Living boundaries</p>
       </div>
-      <h3 className="mt-5 font-serif text-2xl leading-tight text-lotus-brown">Share your energy, in real time.</h3>
+      <h3 className="mt-5 font-serif text-2xl leading-tight text-lotus-white">Share your energy, in real time.</h3>
       <div className="mt-6 flex flex-wrap gap-2.5">
         {BOUNDARIES.map((boundary) => {
           const selected = active.includes(boundary);
@@ -81,8 +89,8 @@ function LivingBoundaries() {
               onClick={() => toggle(boundary)}
               className={`rounded-full border px-4 py-2 text-sm transition-all duration-300 ${
                 selected
-                  ? 'border-lotus-brown bg-lotus-brown text-lotus-white'
-                  : 'border-lotus-muted/60 bg-lotus-white text-lotus-plum hover:border-lotus-mauve'
+                  ? 'border-saffron-400/50 bg-saffron-400/30 text-lotus-white'
+                  : 'border-white/20 bg-white/5 text-lotus-blush hover:border-white/35'
               }`}
             >
               {boundary}
@@ -90,7 +98,7 @@ function LivingBoundaries() {
           );
         })}
       </div>
-      <p className="mt-6 text-sm leading-relaxed text-lotus-plum">
+      <p className="mt-6 text-sm leading-relaxed text-lotus-blush/90">
         {active.length > 0
           ? `Visible to your matches: ${active.join(', ')}.`
           : 'Tap a boundary to let your matches know how you are feeling today.'}
@@ -101,16 +109,17 @@ function LivingBoundaries() {
 
 export function TrustSection() {
   return (
-    <section id="trust" className="scroll-mt-20 bg-lotus-ivory py-20 sm:py-24">
+    <section id="trust" className={`${darkSectionBase} py-20 sm:py-24`}>
+      <div className={darkSectionOverlay} aria-hidden="true" />
       <div className={sectionWrap}>
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
           <Reveal className="lg:col-span-5">
             <VerificationShield />
-            <p className={`${eyebrow} mt-10 text-center lg:text-left`}>Trust and boundaries</p>
-            <h2 className={`${sectionHeading} mt-5 text-center lg:text-left`}>
-              Designed for people, <em className="italic text-kumkum-600">not endless engagement.</em>
+            <p className={`${darkEyebrow} mt-10 text-center lg:text-left`}>Trust and boundaries</p>
+            <h2 className={`${darkSectionHeading} mt-5 text-center lg:text-left`}>
+              Designed for people, <em className="italic text-lotus-rose">not endless engagement.</em>
             </h2>
-            <p className="mt-6 text-center text-base leading-[1.75] text-lotus-plum lg:text-left">
+            <p className={`${darkSectionBodySm} mt-6 text-center lg:text-left`}>
               Every member is verified with their Aadhaar identity, so you know exactly who you are meeting. Our safeguards keep conversations focused, paced, and respectful.
             </p>
           </Reveal>
@@ -122,13 +131,13 @@ export function TrustSection() {
                 return (
                   <li key={feature.title}>
                     <Reveal delay={index * 80}>
-                      <div className="flex gap-4 border-t border-lotus-blush pt-6">
-                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-saffron-100">
-                          <Icon className="h-4 w-4 text-kumkum-600" aria-hidden="true" />
+                      <div className="flex gap-4 border-t border-white/10 pt-6">
+                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-saffron-400/20">
+                          <Icon className="h-4 w-4 text-saffron-100" aria-hidden="true" />
                         </span>
                         <div>
-                          <h3 className="font-serif text-xl leading-tight text-lotus-brown">{feature.title}</h3>
-                          <p className="mt-2 text-sm leading-relaxed text-lotus-plum">{feature.body}</p>
+                          <h3 className="font-serif text-xl leading-tight text-lotus-white">{feature.title}</h3>
+                          <p className="mt-2 text-sm leading-relaxed text-lotus-blush/90">{feature.body}</p>
                         </div>
                       </div>
                     </Reveal>
