@@ -1,6 +1,6 @@
 import { Leaf, MessageSquareHeart, Sparkles, type LucideIcon } from 'lucide-react';
 import { Reveal } from '@/components/ui/reveal';
-import { sectionWrap } from '@/lib/styles';
+import { darkSectionBase, darkSectionOverlay, sectionWrap } from '@/lib/styles';
 
 const MATCH_POINTS = [
   'Matched on personality type and deep values',
@@ -70,14 +70,8 @@ function FeatureCard({
 
 export function TwoWaysSection() {
   return (
-    <section
-      id="two-ways"
-      className="relative isolate scroll-mt-20 overflow-hidden bg-velvet py-28 text-lotus-white sm:py-36"
-    >
-      <div
-        className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_12%_0%,_rgba(232,169,189,0.22)_0%,_transparent_50%),radial-gradient(ellipse_at_92%_100%,_rgba(233,162,59,0.18)_0%,_transparent_48%)]"
-        aria-hidden="true"
-      />
+    <section id="two-ways" className={`${darkSectionBase} py-28 sm:py-36`}>
+      <div className={darkSectionOverlay} aria-hidden="true" />
       <div className={`${sectionWrap}`}>
         <Reveal className="mx-auto max-w-3xl text-center">
           <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-saffron-100">Two ways to connect</p>

@@ -112,14 +112,18 @@ export function HeroSection() {
         </TiltCard>
       </div>
 
-      <dl className="relative z-10 mx-auto mt-16 grid max-w-7xl grid-cols-3 gap-4 px-6 sm:px-10 lg:mt-20 lg:px-16">
+      <dl className="relative z-10 mx-auto mt-16 grid max-w-7xl grid-cols-3 gap-6 px-6 sm:gap-8 sm:px-10 lg:mt-20 lg:px-16">
         {INDICATORS.map((item) => (
-          <div key={item.label} className="border-t border-lotus-muted/50 pt-5">
-            <dd className="font-serif text-4xl font-medium text-lotus-brown sm:text-5xl">{item.value}</dd>
-            <dt className="mt-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-lotus-plum sm:text-xs">
+          <div key={item.label} className="border-t-2 border-lotus-muted/60 pt-6">
+            <dd className="font-serif text-[3.25rem] font-normal tabular-nums lining-nums leading-none tracking-[0.06em] text-lotus-brown/90 sm:text-[3.75rem]">
+              {item.value}
+            </dd>
+            <dt className="mt-3 text-[11px] font-bold uppercase tracking-[0.14em] text-lotus-brown/85 sm:text-xs">
               {item.label}
             </dt>
-            <dd className="mt-3 max-w-xs text-sm leading-relaxed text-lotus-mauve">{item.detail}</dd>
+            <dd className="mt-3 max-w-xs text-[15px] font-medium leading-snug text-lotus-plum sm:text-base sm:leading-relaxed">
+              {item.detail}
+            </dd>
           </div>
         ))}
       </dl>

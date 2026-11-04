@@ -146,7 +146,7 @@ function ThoughtlineColumn() {
 
 export function MatchingSection() {
   return (
-    <section id="matching" className="scroll-mt-20 bg-lotus-ivory py-20 sm:py-24">
+    <section id="matching" className="scroll-mt-20 bg-lotus-ivory pt-10 pb-20 sm:pt-12 sm:pb-24">
       <div className={sectionWrap}>
         <div className="max-w-3xl">
           <p className={eyebrow}>Two ways to connect</p>
