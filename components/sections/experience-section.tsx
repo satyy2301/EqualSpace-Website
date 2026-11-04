@@ -10,6 +10,7 @@ import {
   ConversationScreen,
   IntroductionScreen,
   ProfileScreen,
+  ThoughtlineScreen,
 } from '@/components/sections/experience-screens';
 
 const SCREENS = [
@@ -37,6 +38,13 @@ const SCREENS = [
     description: 'A calm, distraction-free chat with prompts that start meaningful conversations.',
     Screen: ConversationScreen,
   },
+  {
+    id: 'thoughtline',
+    label: 'Thoughtline text feed',
+    description:
+      'Anonymous thoughts with no public comments—when someone resonates, a like becomes a quiet match offer.',
+    Screen: ThoughtlineScreen,
+  },
 ];
 
 export function ExperienceSection() {
@@ -49,10 +57,10 @@ export function ExperienceSection() {
     <section
       id="experience"
       ref={ref}
-      className="relative scroll-mt-20 overflow-hidden bg-[radial-gradient(ellipse_at_top_left,_#FCE8ED_0%,_transparent_60%)] bg-lotus-ivory py-32 sm:py-40"
+      className="relative scroll-mt-20 overflow-hidden bg-[radial-gradient(ellipse_at_top_left,_#FCE8ED_0%,_transparent_60%)] bg-lotus-ivory pt-28 pb-14 sm:pt-32 sm:pb-16"
     >
-      <div className={`${sectionWrap} grid items-center gap-20 lg:grid-cols-12`}>
-        <div className="lg:col-span-5">
+      <div className={`${sectionWrap} grid items-stretch gap-16 lg:grid-cols-12 lg:gap-10`}>
+        <div className="flex flex-col lg:col-span-5">
           <p className={eyebrow}>The experience</p>
           <h2 className={`${sectionHeading} mt-6`}>
             Meet the experience, <em className="italic text-lotus-plum">not another swipe.</em>
@@ -61,7 +69,7 @@ export function ExperienceSection() {
             Explore previews of the EqualSpace beta. These show what the app looks like, not live features yet.
           </p>
 
-          <div role="tablist" aria-label="App previews" className="mt-12 space-y-2">
+          <div role="tablist" aria-label="App previews" className="mt-12 space-y-1.5">
             {SCREENS.map((screen, index) => {
               const selected = index === activeIndex;
               return (
@@ -73,7 +81,7 @@ export function ExperienceSection() {
                   aria-selected={selected}
                   aria-controls="experience-panel"
                   onClick={() => setActiveIndex(index)}
-                  className={`group flex w-full items-start gap-5 rounded-2xl border px-5 py-4 text-left transition-all duration-500 ${
+                  className={`group flex w-full items-start gap-5 rounded-2xl border px-5 py-3.5 text-left transition-all duration-500 ${
                     selected
                       ? 'border-lotus-muted/70 bg-lotus-white shadow-[0_18px_40px_-30px_rgba(114,84,93,0.5)]'
                       : 'border-transparent hover:border-lotus-blush hover:bg-lotus-white/60'
@@ -102,13 +110,13 @@ export function ExperienceSection() {
           </div>
         </div>
 
-        <div className="relative flex justify-center lg:col-span-6 lg:col-start-7">
+        <div className="relative flex min-h-0 flex-col items-center lg:col-span-6 lg:col-start-7 lg:justify-center">
           <div
-            className="absolute -left-4 top-10 h-72 w-72 rounded-full bg-lotus-blush/50 blur-3xl sm:left-8"
+            className="absolute -left-4 top-10 h-72 w-72 rounded-full bg-lotus-blush/50 blur-3xl sm:left-8 lg:top-1/2 lg:-translate-y-1/2"
             aria-hidden="true"
           />
           <div
-            className="relative transition-transform duration-700 ease-out"
+            className="relative flex h-full min-h-0 w-full max-w-[380px] flex-col transition-transform duration-700 ease-out"
             style={{ transform: `translate3d(0, ${parallaxOffset}px, 0)` }}
           >
             <div
@@ -116,15 +124,15 @@ export function ExperienceSection() {
               role="tabpanel"
               aria-labelledby={`tab-${SCREENS[activeIndex].id}`}
               key={SCREENS[activeIndex].id}
-              className="animate-fade-up"
+              className="animate-fade-up flex min-h-[420px] flex-1 items-center justify-center sm:min-h-[480px] lg:min-h-0"
             >
-              <TiltCard max={5} className="mx-auto w-fit">
-                <MobileMockup>
+              <TiltCard max={5} className="flex h-full max-h-full w-full items-center justify-center">
+                <MobileMockup className="h-full max-h-full w-auto max-w-[min(100%,340px)]">
                   <ActiveScreen />
                 </MobileMockup>
               </TiltCard>
             </div>
-            <p className="mt-6 text-center text-[11px] uppercase tracking-[0.22em] text-lotus-mauve">
+            <p className="mt-5 shrink-0 text-center text-[11px] uppercase tracking-[0.22em] text-lotus-mauve sm:mt-6">
               Preview of the beta app
             </p>
           </div>
