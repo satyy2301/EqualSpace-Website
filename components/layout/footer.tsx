@@ -3,7 +3,6 @@ import { Logo } from '@/components/ui/logo';
 import { eyebrow } from '@/lib/styles';
 
 const NAV_LINKS = [
-  { href: '#philosophy', label: 'Our Philosophy' },
   { href: '#journey', label: 'How It Works' },
   { href: '#experience', label: 'The Experience' },
   { href: '#community', label: 'Community' },

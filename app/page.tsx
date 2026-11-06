@@ -2,7 +2,6 @@ import { Navbar } from '@/components/layout/navbar';
 import { Footer } from '@/components/layout/footer';
 import { HeroSection } from '@/components/sections/hero-section';
 import { TwoWaysSection } from '@/components/sections/two-ways-section';
-import { PhilosophySection } from '@/components/sections/philosophy-section';
 import { JourneySection } from '@/components/sections/journey-section';
 import { ExperienceSection } from '@/components/sections/experience-section';
 import { MatchingSection } from '@/components/sections/matching-section';
@@ -19,7 +18,6 @@ export default function Home() {
       <main>
         <HeroSection />
         <TwoWaysSection />
-        <PhilosophySection />
         <JourneySection />
         <ExperienceSection />
         <MatchingSection />

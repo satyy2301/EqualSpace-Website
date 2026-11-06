@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { ProfilePreview } from '@/components/ui/profile-preview';
 import { HeroBackdrop } from '@/components/ui/hero-backdrop';
 import { TiltCard } from '@/components/ui/tilt-card';
+import { Mark } from '@/components/ui/mark';
 import { ctaPrimary, ctaSecondary, eyebrow } from '@/lib/styles';
 
 const HEADLINE = [
@@ -34,7 +35,7 @@ export function HeroSection() {
             style={{ animationDelay: '200ms' }}
           >
             <span className="h-1.5 w-1.5 rounded-full bg-saffron-400" aria-hidden="true" />
-            Beta version is open
+            City lists are filling
           </p>
 
           <h1 className="mt-8 font-serif text-[clamp(3.25rem,7vw,6.5rem)] font-medium leading-[1.02] tracking-[-0.015em] text-lotus-brown">
@@ -54,7 +55,7 @@ export function HeroSection() {
             className="mt-8 max-w-xl animate-fade-up text-lg leading-[1.7] text-lotus-plum sm:text-xl"
             style={{ animationDelay: '1100ms' }}
           >
-            Match with curated profiles, or share your thoughts anonymously and let genuine connections come to you. Every city keeps a strict 1:1 ratio, with an equal number of slots for women and men.
+            Match with curated profiles, or share your thoughts anonymously and let genuine connections come to you. Every city keeps a strict <Mark>1:1</Mark> ratio, with an equal number of slots for women and men.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: '1350ms' }}>

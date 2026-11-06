@@ -66,7 +66,7 @@ export function ExperienceSection() {
             Meet the experience, <em className="italic text-lotus-plum">not another swipe.</em>
           </h2>
           <p className="mt-6 max-w-md text-base leading-[1.75] text-lotus-plum">
-            Explore previews of the EqualSpace beta. These show what the app looks like, not live features yet.
+            Previews only. The app is not open yet. These show the product we are inviting people into.
           </p>
 
           <div role="tablist" aria-label="App previews" className="mt-12 space-y-1.5">
@@ -133,7 +133,7 @@ export function ExperienceSection() {
               </TiltCard>
             </div>
             <p className="mt-5 shrink-0 text-center text-[11px] uppercase tracking-[0.22em] text-lotus-mauve sm:mt-6">
-              Preview of the beta app
+              Preview of the app
             </p>
           </div>
         </div>

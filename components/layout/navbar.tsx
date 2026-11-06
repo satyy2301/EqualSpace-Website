@@ -6,15 +6,14 @@ import { Logo } from '@/components/ui/logo';
 import { ctaPrimary } from '@/lib/styles';
 
 const NAV_LINKS = [
-  { href: '#philosophy', label: 'Our Philosophy' },
-  { href: '#experience', label: 'The Experience' },
   { href: '#journey', label: 'How It Works' },
+  { href: '#experience', label: 'The Experience' },
   { href: '#matching', label: 'Matching' },
   { href: '#trust', label: 'Trust' },
   { href: '#community', label: 'Community' },
 ];
 
-const SECTION_IDS = ['philosophy', 'experience', 'compatibility', 'matching', 'community'];
+const SECTION_IDS = ['journey', 'experience', 'matching', 'trust', 'community'];
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);

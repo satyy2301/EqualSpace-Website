@@ -2,31 +2,48 @@
 
 import { useRef, useState, type KeyboardEvent } from 'react';
 import { BalanceVisual, ChatVisual, CompatibilityVisual, PicksVisual } from '@/components/sections/journey-visuals';
+import { Mark } from '@/components/ui/mark';
 import { eyebrow, sectionHeading, sectionWrap } from '@/lib/styles';
 
 const STEPS = [
   {
     label: 'Join',
-    title: 'Join a balanced community',
-    body: 'Each city pool keeps an exact 1:1 balance. When one side fills, newcomers join a rotating queue until balance is restored.',
+    title: 'You join your city',
+    body: (
+      <>
+        Each city keeps the same number of women and men. If one side is full, you wait until a place opens. You are not added to a crowd. When you create your profile, you also add your birth date, birth time, and birth place, and you take a short <Mark>MBTI</Mark> test. From that, EqualSpace uses your <Mark>sun, moon, and rising signs</Mark>, your <Mark>life-path number</Mark>, and your <Mark>MBTI</Mark> type to help choose your matches.
+      </>
+    ),
     Visual: BalanceVisual,
   },
   {
     label: 'Pick',
-    title: 'Receive your daily curated picks',
-    body: 'At 8:00 AM, receive three to five carefully selected profiles based on meaningful compatibility. No endless swiping.',
+    title: 'A few people arrive each morning',
+    body: (
+      <>
+        At 8:00 you get <Mark>3 to 5</Mark> profiles. They are chosen for personality, values, and what you are looking for. There is no long list to swipe.
+      </>
+    ),
     Visual: PicksVisual,
   },
   {
     label: 'Understand',
-    title: 'Discover why you match',
-    body: 'See how you line up on shared values, emotional availability, communication, relationship intentions, and lifestyle.',
+    title: 'You can see why you were introduced',
+    body: (
+      <>
+        For each person you see where you line up: values, how you communicate, the kind of relationship you want, and how you live. That includes your <Mark>MBTI</Mark> type, your <Mark>sun, moon, and rising signs</Mark>, and your <Mark>life-path number</Mark>. It is there to explain the match. It is not a score.
+      </>
+    ),
     Visual: CompatibilityVisual,
   },
   {
     label: 'Start',
-    title: 'Begin with intention',
-    body: 'Answer a five-question icebreaker before direct conversation unlocks. Chats happen in focused 72-hour windows.',
+    title: 'Five questions, then a chat',
+    body: (
+      <>
+        You both answer the same <Mark>5 questions</Mark> before you can message. They cover your weekend energy, how fast you reply, how you handle stress, what you like to talk about, and when you would want to meet. You are active for <Mark>72 hours</Mark>, then away for <Mark>14 days</Mark>. New people stop arriving once you have <Mark>5 chats</Mark>.
+      </>
+    ),
     Visual: ChatVisual,
   },
 ];
@@ -58,7 +75,7 @@ export function JourneySection() {
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-lotus-mauve">
-            Illustrative previews of the beta app. Tap each step to explore.
+            Sample screens. The app is not open yet. Tap a step to see it.
           </p>
         </div>
 
