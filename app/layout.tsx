@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 const fontStyles = {
   '--font-serif': "'Cormorant Garamond', Georgia, serif",
-  '--font-sans': "'Nunito Sans', system-ui, sans-serif",
+  '--font-sans': "'Inter', system-ui, sans-serif",
 } as React.CSSProperties;
 
 const title = 'EqualSpace | Where genuine love blooms, naturally';
@@ -40,7 +40,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Nunito+Sans:wght@400;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,500&family=Inter:wght@400;500;600&display=swap"
         />
       </head>
       <body className="min-h-screen overflow-x-hidden bg-lotus-ivory font-sans text-lotus-plum antialiased">

@@ -63,10 +63,10 @@ export function ExperienceSection() {
         <div className="flex flex-col lg:col-span-5">
           <p className={eyebrow}>The experience</p>
           <h2 className={`${sectionHeading} mt-6`}>
-            Meet the experience, <em className="italic text-lotus-plum">not another swipe.</em>
+            Meet the experience, <span className="text-lotus-plum">not another swipe.</span>
           </h2>
           <p className="mt-6 max-w-md text-base leading-[1.75] text-lotus-plum">
-            Explore previews of the EqualSpace beta. These show what the app looks like, not live features yet.
+            Previews only. The app is not open yet. These show the product we are inviting people into.
           </p>
 
           <div role="tablist" aria-label="App previews" className="mt-12 space-y-1.5">
@@ -88,14 +88,14 @@ export function ExperienceSection() {
                   }`}
                 >
                   <span
-                    className={`font-serif text-xl italic transition-colors duration-500 ${
+                    className={`text-lg font-medium transition-colors duration-500 ${
                       selected ? 'text-lotus-plum' : 'text-lotus-mauve'
                     }`}
                   >
                     {String.fromCharCode(65 + index)}
                   </span>
                   <span className="flex-1">
-                    <span className="block font-serif text-xl text-lotus-brown">{screen.label}</span>
+                    <span className="block text-lg font-medium text-lotus-brown">{screen.label}</span>
                     <span
                       className={`mt-1 block overflow-hidden text-sm leading-relaxed text-lotus-plum transition-all duration-500 ${
                         selected ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0'
@@ -132,8 +132,8 @@ export function ExperienceSection() {
                 </MobileMockup>
               </TiltCard>
             </div>
-            <p className="mt-5 shrink-0 text-center text-[11px] uppercase tracking-[0.22em] text-lotus-mauve sm:mt-6">
-              Preview of the beta app
+            <p className="mt-5 shrink-0 text-center text-[15px] font-medium text-lotus-mauve sm:mt-6">
+              Preview of the app
             </p>
           </div>
         </div>

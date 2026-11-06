@@ -41,11 +41,11 @@ function PicksColumn() {
         <span className="flex h-12 w-12 items-center justify-center rounded-full bg-saffron-100">
           <Sunrise className="h-5 w-5 text-kumkum-600" aria-hidden="true" />
         </span>
-        <span className="rounded-full bg-lotus-petal px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-lotus-plum">
+        <span className="rounded-full bg-lotus-petal px-3 py-1.5 text-sm font-medium text-lotus-plum">
           Delivered 8:00 AM
         </span>
       </div>
-      <h3 className="mt-8 font-serif text-3xl leading-tight text-lotus-brown">Your daily curated picks</h3>
+      <h3 className="mt-8 text-2xl font-medium leading-snug text-lotus-brown sm:text-3xl">Your daily curated picks</h3>
       <p className="mt-4 text-base leading-[1.75] text-lotus-plum">
         Every morning, discover three to five people who are genuinely compatible with you.
       </p>
@@ -65,10 +65,10 @@ function PicksColumn() {
                   <Image src={pick.image} alt={`${pick.name}, sample profile`} fill sizes="44px" className="object-cover" />
                 </span>
                 <span className="flex-1">
-                  <span className="block font-serif text-lg text-lotus-brown">
+                  <span className="block text-base font-medium text-lotus-brown">
                     {pick.name}, {pick.age}
                   </span>
-                  <span className="block text-[10px] uppercase tracking-[0.16em] text-lotus-mauve">{pick.city}</span>
+                  <span className="block text-sm font-medium text-lotus-mauve">{pick.city}</span>
                 </span>
               </button>
               <div
@@ -95,16 +95,16 @@ function ThoughtlineColumn() {
         <span className="flex h-12 w-12 items-center justify-center rounded-full bg-lotus-white">
           <Layers className="h-5 w-5 text-kumkum-600" aria-hidden="true" />
         </span>
-        <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-lotus-mauve">Anonymous feed</span>
+        <span className="text-sm font-medium text-lotus-mauve">Anonymous feed</span>
       </div>
-      <h3 className="mt-8 font-serif text-3xl leading-tight text-lotus-brown">Thoughtline, a quiet text feed</h3>
+      <h3 className="mt-8 text-2xl font-medium leading-snug text-lotus-brown sm:text-3xl">Thoughtline, a quiet text feed</h3>
       <p className="mt-4 text-base leading-[1.75] text-lotus-plum">
         Text-first posts with no public comments. When a post gains traction, only the best matches see it.
       </p>
 
       <article className="mt-8 rounded-2xl bg-lotus-white p-6 shadow-[0_20px_40px_-30px_rgba(114,84,93,0.4)]">
-        <p className="text-[10px] uppercase tracking-[0.16em] text-lotus-mauve">Member, 30s · Pune</p>
-        <p className="mt-3 font-serif text-xl italic leading-snug text-lotus-brown">
+        <p className="text-sm font-medium text-lotus-mauve">Member, 30s · Pune</p>
+        <p className="mt-3 text-lg leading-snug text-lotus-brown">
           What does a good disagreement look like to you?
         </p>
         <div className="mt-6 h-1.5 overflow-hidden rounded-full bg-saffron-100">
@@ -151,7 +151,7 @@ export function MatchingSection() {
         <div className="max-w-3xl">
           <p className={eyebrow}>Two ways to connect</p>
           <h2 className={`${sectionHeading} mt-5`}>
-            Two ways to find your <em className="italic text-kumkum-600">people.</em>
+            Two ways to find your <span className="text-kumkum-600">people.</span>
           </h2>
         </div>
 

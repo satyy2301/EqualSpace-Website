@@ -8,8 +8,8 @@ const ANANYA_PHOTO = 'https://images.pexels.com/photos/10485148/pexels-photo-104
 function ScreenHeader({ label }: { label: string }) {
   return (
     <div className="flex shrink-0 items-center justify-between border-b border-lotus-blush/50 px-5 pt-4 pb-3">
-      <span className="font-serif text-lg italic text-lotus-brown">EqualSpace</span>
-      <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-lotus-mauve">{label}</span>
+      <span className="text-base font-medium text-lotus-brown">EqualSpace</span>
+      <span className="text-xs font-medium text-lotus-mauve">{label}</span>
     </div>
   );
 }
@@ -32,7 +32,7 @@ export function ProfileScreen() {
       <div className="flex min-h-0 flex-1 flex-col space-y-3.5 px-5 pt-4">
         <div>
           <p className="font-serif text-2xl text-lotus-brown">Rohan, 32</p>
-          <p className="text-[10px] uppercase tracking-[0.18em] text-lotus-mauve">Mumbai</p>
+          <p className="text-xs font-medium text-lotus-mauve">Mumbai</p>
         </div>
         <p className="flex items-center gap-1.5 text-[10px] font-medium text-lotus-plum">
           <ShieldCheck className="h-3.5 w-3.5 text-kumkum-600" aria-hidden="true" />
@@ -49,11 +49,11 @@ export function ProfileScreen() {
           ))}
         </div>
         <div className="rounded-2xl border border-saffron-400/50 bg-lotus-white px-4 py-3">
-          <p className="text-[9px] font-semibold uppercase tracking-[0.2em] text-lotus-mauve">Looking for</p>
-          <p className="mt-1 font-serif text-base text-lotus-brown">A serious relationship</p>
+          <p className="text-xs font-medium text-lotus-mauve">Looking for</p>
+          <p className="mt-1 text-sm font-medium text-lotus-brown">A serious relationship</p>
         </div>
         <ul className="space-y-2 rounded-2xl bg-lotus-petal/80 px-4 py-3">
-          <p className="text-[9px] font-semibold uppercase tracking-[0.18em] text-lotus-mauve">Values snapshot</p>
+          <p className="text-xs font-medium text-lotus-mauve">Values snapshot</p>
           {values.map((value) => (
             <li key={value} className="flex items-center gap-2 text-[11px] text-lotus-plum">
               <span className="h-1 w-1 rounded-full bg-saffron-400" aria-hidden="true" />
@@ -62,8 +62,8 @@ export function ProfileScreen() {
           ))}
         </ul>
         <MockFooter>
-          <p className="text-[9px] font-semibold uppercase tracking-[0.18em] text-lotus-mauve">Before you chat</p>
-          <p className="mt-1 font-serif text-[13px] italic text-lotus-brown">Answer 5 icebreaker questions to unlock messaging.</p>
+          <p className="text-xs font-medium text-lotus-mauve">Before you chat</p>
+          <p className="mt-1 text-sm leading-snug text-lotus-brown">Answer 5 icebreaker questions to unlock messaging.</p>
         </MockFooter>
       </div>
     </div>
@@ -104,7 +104,7 @@ export function CompatibilityScreen() {
           ))}
         </ul>
         <MockFooter>
-          <p className="font-serif text-[15px] text-lotus-brown">Strong fit on relationship goals</p>
+          <p className="text-sm font-medium text-lotus-brown">Strong fit on relationship goals</p>
           <p className="mt-1 text-[11px] leading-relaxed text-lotus-plum">
             Context to help you decide—not a score to chase.
           </p>
@@ -128,7 +128,7 @@ export function IntroductionScreen() {
             <Image src={ROHAN_PHOTO} alt="Rohan, portrait" fill sizes="140px" className="object-cover" />
           </div>
         </div>
-        <p className="mt-5 text-center font-serif text-xl italic text-lotus-brown">Ananya & Rohan</p>
+        <p className="mt-5 text-center text-lg font-medium text-lotus-brown">Ananya & Rohan</p>
         <p className="mt-2 text-center text-[12px] leading-relaxed text-lotus-plum">
           You both value slow mornings and share a love of classical music. A thoughtful place to begin.
         </p>
@@ -140,7 +140,7 @@ export function IntroductionScreen() {
           ))}
         </div>
         <ul className="mt-5 space-y-2 rounded-2xl bg-lotus-petal/90 px-4 py-3">
-          <p className="text-[9px] font-semibold uppercase tracking-[0.16em] text-lotus-mauve">Why you were introduced</p>
+          <p className="text-xs font-medium text-lotus-mauve">Why you were introduced</p>
           {reasons.map((reason) => (
             <li key={reason} className="text-[11px] leading-snug text-lotus-plum">
               {reason}
@@ -149,10 +149,10 @@ export function IntroductionScreen() {
         </ul>
         <MockFooter>
           <div className="flex flex-col gap-2">
-            <span className="rounded-full bg-kumkum-600 py-2.5 text-center text-[10px] font-semibold uppercase tracking-[0.14em] text-lotus-white">
+            <span className="rounded-full bg-kumkum-600 py-2.5 text-center text-xs font-medium text-lotus-white">
               Start with icebreakers
             </span>
-            <span className="rounded-full border border-lotus-muted/60 py-2 text-center text-[10px] font-semibold uppercase tracking-[0.12em] text-lotus-plum">
+            <span className="rounded-full border border-lotus-muted/60 py-2 text-center text-xs font-medium text-lotus-plum">
               Save for later
             </span>
           </div>
@@ -170,12 +170,12 @@ export function ConversationScreen() {
           <Image src={ROHAN_PHOTO} alt="Rohan" fill sizes="36px" className="object-cover" />
         </div>
         <div>
-          <p className="font-serif text-base text-lotus-brown">Rohan</p>
-          <p className="text-[9px] uppercase tracking-[0.18em] text-lotus-mauve">Matched 2 days ago</p>
+          <p className="text-sm font-medium text-lotus-brown">Rohan</p>
+          <p className="text-xs font-medium text-lotus-mauve">Matched 2 days ago</p>
         </div>
       </div>
       <div className="flex min-h-0 flex-1 flex-col gap-2.5 overflow-y-auto px-5 py-4 text-[12px]">
-        <p className="text-center text-[9px] uppercase tracking-[0.2em] text-lotus-mauve">Today</p>
+        <p className="text-center text-xs font-medium text-lotus-mauve">Today</p>
         <div className="max-w-[80%] self-start rounded-2xl rounded-bl-md bg-lotus-petal px-3.5 py-2.5 leading-relaxed text-lotus-brown">
           Your note about the blue lanes of Jodhpur made my whole week.
         </div>
@@ -192,8 +192,8 @@ export function ConversationScreen() {
           Maybe over chai this weekend, if the city slows down enough for us.
         </div>
         <div className="rounded-2xl border border-saffron-400/50 bg-lotus-white px-4 py-3">
-          <p className="text-[9px] font-semibold uppercase tracking-[0.2em] text-lotus-mauve">Conversation prompt</p>
-          <p className="mt-1 font-serif text-[13px] italic text-lotus-brown">What does a perfect slow Sunday look like to you?</p>
+          <p className="text-xs font-medium text-lotus-mauve">Conversation prompt</p>
+          <p className="mt-1 text-sm leading-snug text-lotus-brown">What does a perfect slow Sunday look like to you?</p>
         </div>
       </div>
       <div className="shrink-0 border-t border-lotus-blush/60 px-5 py-3">
@@ -233,7 +233,7 @@ export function ThoughtlineScreen() {
   return (
     <div className="flex h-full min-h-0 flex-col">
       <ScreenHeader label="Thoughtline" />
-      <p className="shrink-0 px-5 pb-2 text-[9px] font-semibold uppercase tracking-[0.18em] text-lotus-mauve">
+      <p className="shrink-0 px-5 pb-2 text-xs font-medium text-lotus-mauve">
         Anonymous · no public comments
       </p>
       <div className="min-h-0 flex-1 space-y-3 overflow-y-auto px-4 pb-3">
@@ -246,8 +246,8 @@ export function ThoughtlineScreen() {
                 : 'border-lotus-blush/50 bg-lotus-white/80'
             }`}
           >
-            <p className="text-[10px] uppercase tracking-[0.14em] text-lotus-mauve">{post.meta}</p>
-            <p className="mt-2 font-serif text-[15px] italic leading-snug text-lotus-brown">{post.thought}</p>
+            <p className="text-xs font-medium text-lotus-mauve">{post.meta}</p>
+            <p className="mt-2 text-sm leading-snug text-lotus-brown">{post.thought}</p>
             <div className="mt-3 h-1 overflow-hidden rounded-full bg-saffron-100">
               <div
                 className="h-full rounded-full bg-gradient-to-r from-saffron-400 to-kumkum-500"

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { ProfilePreview } from '@/components/ui/profile-preview';
 import { HeroBackdrop } from '@/components/ui/hero-backdrop';
 import { TiltCard } from '@/components/ui/tilt-card';
+import { Mark } from '@/components/ui/mark';
 import { ctaPrimary, ctaSecondary, eyebrow } from '@/lib/styles';
 
 const HEADLINE = [
@@ -34,7 +35,7 @@ export function HeroSection() {
             style={{ animationDelay: '200ms' }}
           >
             <span className="h-1.5 w-1.5 rounded-full bg-saffron-400" aria-hidden="true" />
-            Beta version is open
+            City lists are filling
           </p>
 
           <h1 className="mt-8 font-serif text-[clamp(3.25rem,7vw,6.5rem)] font-medium leading-[1.02] tracking-[-0.015em] text-lotus-brown">
@@ -54,7 +55,7 @@ export function HeroSection() {
             className="mt-8 max-w-xl animate-fade-up text-lg leading-[1.7] text-lotus-plum sm:text-xl"
             style={{ animationDelay: '1100ms' }}
           >
-            Match with curated profiles, or share your thoughts anonymously and let genuine connections come to you. Every city keeps a strict 1:1 ratio, with an equal number of slots for women and men.
+            Match with curated profiles, or share your thoughts anonymously and let genuine connections come to you. Every city keeps a strict <Mark>1:1</Mark> ratio, with an equal number of slots for women and men.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: '1350ms' }}>
@@ -100,7 +101,7 @@ export function HeroSection() {
             style={{ animationDelay: '1000ms' }}
           >
             <span className="font-serif text-3xl leading-none text-kumkum-600">1:1</span>
-            <span className="mt-1 text-[9px] font-semibold uppercase tracking-[0.2em] text-lotus-mauve">Balanced</span>
+            <span className="mt-1 text-xs font-medium text-lotus-mauve">Balanced</span>
           </div>
 
           <div className="absolute bottom-[4%] right-[2%] z-20 hidden animate-fade-up sm:block" style={{ animationDelay: '1500ms' }}>
@@ -118,7 +119,7 @@ export function HeroSection() {
             <dd className="font-serif text-[3.25rem] font-normal tabular-nums lining-nums leading-none tracking-[0.06em] text-lotus-brown/90 sm:text-[3.75rem]">
               {item.value}
             </dd>
-            <dt className="mt-3 text-[11px] font-bold uppercase tracking-[0.14em] text-lotus-brown/85 sm:text-xs">
+            <dt className="mt-3 text-[15px] font-medium text-lotus-brown/85">
               {item.label}
             </dt>
             <dd className="mt-3 max-w-xs text-[15px] font-medium leading-snug text-lotus-plum sm:text-base sm:leading-relaxed">

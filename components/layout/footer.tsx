@@ -3,7 +3,6 @@ import { Logo } from '@/components/ui/logo';
 import { eyebrow } from '@/lib/styles';
 
 const NAV_LINKS = [
-  { href: '#philosophy', label: 'Our Philosophy' },
   { href: '#journey', label: 'How It Works' },
   { href: '#experience', label: 'The Experience' },
   { href: '#community', label: 'Community' },
@@ -22,7 +21,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-14 px-6 py-20 sm:px-10 md:grid-cols-12 lg:px-16">
         <div className="md:col-span-5">
           <Logo />
-          <p className="mt-6 max-w-xs font-serif text-2xl italic leading-snug text-lotus-brown">
+          <p className="mt-6 max-w-xs text-xl font-medium leading-snug text-lotus-brown">
             A more intentional way to find love.
           </p>
         </div>

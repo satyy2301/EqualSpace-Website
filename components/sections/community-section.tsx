@@ -40,10 +40,10 @@ function CommunityVoices() {
         {VOICES.map((voice, index) => (
           <li key={`${voice.name}-${voice.city}`} className="lg:px-6 first:lg:pl-0 last:lg:pr-0">
             <Reveal delay={index * 100}>
-              <p className="font-serif text-lg italic leading-snug text-lotus-brown">
+              <p className="text-lg leading-snug text-lotus-brown">
                 &ldquo;{voice.quote}&rdquo;
               </p>
-              <p className="mt-2 text-xs font-semibold uppercase tracking-[0.16em] text-lotus-mauve">
+              <p className="mt-2 text-[15px] font-medium text-lotus-mauve">
                 {voice.name} · {voice.age} · {voice.city}
               </p>
             </Reveal>
@@ -65,7 +65,7 @@ export function CommunitySection() {
           <Reveal className="lg:col-span-7">
             <p className={eyebrow}>Community</p>
             <h2 className={`${sectionHeading} mt-5`}>
-              Good things begin with the <em className="italic text-kumkum-600">right</em> people.
+              Good things begin with the <span className="text-kumkum-600">right</span> people.
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-[1.75] text-lotus-plum">
               People who show up verified, answer before they chat, and prefer depth over noise.
@@ -77,11 +77,11 @@ export function CommunitySection() {
           <Reveal className="lg:col-span-12">
             <div className="rounded-[32px] bg-lotus-petal p-8 sm:p-10 lg:grid lg:grid-cols-2 lg:items-stretch lg:gap-10">
               <div className="flex h-full flex-col items-center justify-center text-center lg:px-6 lg:py-4">
-                <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-lotus-mauve">
+                <p className="text-[15px] font-medium text-lotus-mauve">
                   Founding member invitation
                 </p>
-                <h3 className="mt-5 max-w-md font-serif text-3xl font-semibold leading-[1.08] tracking-tight text-lotus-brown sm:text-4xl lg:text-[2.65rem]">
-                  Be part of the <em className="font-semibold italic text-kumkum-600">first</em> circle.
+                <h3 className="mt-5 max-w-md font-serif text-4xl font-medium leading-[1.12] text-lotus-brown sm:text-5xl">
+                  Be part of the <span className="text-kumkum-600">first</span> circle.
                 </h3>
                 <p className="mt-5 max-w-md text-[17px] font-medium leading-[1.65] text-lotus-plum">
                   Early access members will hear from us first as EqualSpace takes shape, and will have a voice in what
