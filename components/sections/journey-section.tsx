@@ -71,7 +71,7 @@ export function JourneySection() {
           <div>
             <p className={eyebrow}>How EqualSpace works</p>
             <h2 className={`${sectionHeading} mt-5`}>
-              A better way to <em className="italic text-kumkum-600">meet someone.</em>
+              A better way to <span className="text-kumkum-600">meet someone.</span>
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-lotus-mauve">
@@ -102,8 +102,8 @@ export function JourneySection() {
                     : 'border-lotus-muted/60 bg-lotus-ivory text-lotus-plum hover:border-lotus-mauve hover:text-lotus-brown'
                 }`}
               >
-                <span className="font-serif italic">0{index + 1}</span>
-                <span className="font-semibold uppercase tracking-[0.14em] text-[11px]">{item.label}</span>
+                <span className="text-lg font-medium">0{index + 1}</span>
+                <span className="text-[15px] font-medium">{item.label}</span>
               </button>
             );
           })}
@@ -117,7 +117,7 @@ export function JourneySection() {
           className="mt-8 grid animate-fade-up gap-10 rounded-[32px] border border-lotus-blush/70 bg-lotus-ivory p-8 sm:p-10 lg:grid-cols-12 lg:gap-12 lg:p-14"
         >
           <div className="flex flex-col justify-center lg:col-span-5">
-            <h3 className="font-serif text-3xl leading-tight text-lotus-brown sm:text-4xl">{step.title}</h3>
+            <h3 className="text-2xl font-medium leading-snug text-lotus-brown sm:text-3xl">{step.title}</h3>
             <p className="mt-5 text-base leading-[1.75] text-lotus-plum">{step.body}</p>
           </div>
           <div className="flex min-h-[340px] items-center rounded-[24px] bg-lotus-white p-6 shadow-[0_24px_50px_-36px_rgba(114,84,93,0.4)] sm:p-8 lg:col-span-7">

@@ -11,7 +11,7 @@ import {
   registrationSchema,
   type RegistrationField,
 } from '@/lib/registration-schema';
-import { ctaPrimary } from '@/lib/styles';
+import { ctaPrimary, fieldLabel } from '@/lib/styles';
 
 type FormValues = {
   fullName: string;
@@ -81,7 +81,7 @@ function SelectField({
 }) {
   return (
     <div>
-      <label htmlFor={id} className="mb-2 block text-[12px] font-semibold uppercase tracking-[0.18em] text-lotus-plum">
+      <label htmlFor={id} className={fieldLabel}>
         {label}
       </label>
       <div className="relative">
@@ -189,7 +189,7 @@ export function RegistrationForm() {
           className="h-40 w-40 drop-shadow-[0_20px_30px_rgba(114,84,93,0.2)] transition-all duration-1000 ease-out"
         />
         <h3 className="mt-8 animate-fade-up font-serif text-4xl font-medium text-lotus-brown sm:text-5xl">
-          You&apos;re on the <em className="italic text-lotus-plum">list.</em>
+          You&apos;re on the <span className="text-lotus-plum">list.</span>
         </h3>
         <p className="mt-5 max-w-sm animate-fade-up text-base leading-[1.75] text-lotus-plum" style={{ animationDelay: '200ms' }}>
           Something beautiful is unfolding. Welcome to EqualSpace.
@@ -209,7 +209,7 @@ export function RegistrationForm() {
       ) : null}
 
       <div>
-        <label htmlFor="fullName" className="mb-2 block text-[12px] font-semibold uppercase tracking-[0.18em] text-lotus-plum">
+        <label htmlFor="fullName" className={fieldLabel}>
           Full name
         </label>
         <input
@@ -227,7 +227,7 @@ export function RegistrationForm() {
       </div>
 
       <div>
-        <label htmlFor="email" className="mb-2 block text-[12px] font-semibold uppercase tracking-[0.18em] text-lotus-plum">
+        <label htmlFor="email" className={fieldLabel}>
           Email address
         </label>
         <input
@@ -248,7 +248,7 @@ export function RegistrationForm() {
 
       <div className="grid gap-7 sm:grid-cols-2">
         <div>
-          <label htmlFor="city" className="mb-2 block text-[12px] font-semibold uppercase tracking-[0.18em] text-lotus-plum">
+          <label htmlFor="city" className={fieldLabel}>
             City
           </label>
           <input

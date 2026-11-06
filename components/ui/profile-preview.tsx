@@ -27,10 +27,10 @@ export function ProfilePreview({
         />
       </div>
       <figcaption className="px-1.5 pb-1 pt-3">
-        <p className="font-serif text-xl font-medium leading-tight text-lotus-brown">
+        <p className="text-lg font-medium leading-tight text-lotus-brown">
           {name}, {age}
         </p>
-        <p className="mt-0.5 text-[11px] uppercase tracking-[0.18em] text-lotus-mauve">{city}</p>
+        <p className="mt-0.5 text-sm font-medium text-lotus-mauve">{city}</p>
       </figcaption>
     </figure>
   );

@@ -78,7 +78,7 @@ export function Navbar() {
                 <a
                   href={link.href}
                   aria-current={isActive ? 'location' : undefined}
-                  className={`relative whitespace-nowrap py-2 text-[11px] font-medium uppercase tracking-[0.16em] transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-lotus-muted after:transition-transform after:duration-500 hover:text-lotus-mauve hover:after:scale-x-100 ${
+                  className={`relative whitespace-nowrap py-2 text-[15px] font-medium tracking-normal transition-colors duration-300 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-lotus-muted after:transition-transform after:duration-500 hover:text-lotus-mauve hover:after:scale-x-100 ${
                     isActive ? 'text-lotus-mauve after:scale-x-100' : 'text-lotus-plum'
                   }`}
                 >
@@ -126,7 +126,7 @@ export function Navbar() {
                 <a
                   href={link.href}
                   onClick={closeMenu}
-                  className="block py-5 font-serif text-3xl font-medium text-lotus-brown"
+                  className="block py-5 text-2xl font-medium text-lotus-brown"
                 >
                   {link.label}
                 </a>

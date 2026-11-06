@@ -57,7 +57,7 @@ function formatRemaining(ms: number) {
 function QueueSide({ label, count }: { label: string; count: number }) {
   return (
     <div>
-      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-lotus-mauve">{label}</p>
+      <p className="text-sm font-medium text-lotus-mauve">{label}</p>
       <div className="mt-4 grid grid-cols-3 gap-2.5">
         {Array.from({ length: count }, (_, index) => (
           <span key={index} className="aspect-square rounded-full bg-lotus-petal ring-1 ring-lotus-blush" aria-hidden="true" />
@@ -74,7 +74,7 @@ export function BalanceVisual() {
       <QueueSide label="Women" count={6} />
       <div className="flex flex-col items-center gap-3">
         <span className="font-serif text-4xl text-lotus-brown">1:1</span>
-        <span className="rounded-full bg-saffron-100 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-lotus-plum">
+        <span className="rounded-full bg-saffron-100 px-3 py-1 text-xs font-medium text-lotus-plum">
           Balanced
         </span>
       </div>
@@ -109,7 +109,7 @@ export function PicksVisual() {
                 <p className="font-serif text-2xl text-lotus-brown">
                   {pick.name}, {pick.age}
                 </p>
-                <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-lotus-mauve">{pick.city}</p>
+                <p className="mt-1 text-xs font-medium text-lotus-mauve">{pick.city}</p>
                 <div className="mt-3 flex flex-wrap gap-1.5">
                   {pick.interests.map((interest) => (
                     <span key={interest} className="rounded-full bg-saffron-100 px-2.5 py-1 text-[10px] text-lotus-plum">
@@ -166,7 +166,7 @@ export function CompatibilityVisual() {
         ))}
       </ul>
       <div>
-        <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-lotus-mauve">Shared interests</p>
+        <p className="text-xs font-medium text-lotus-mauve">Shared interests</p>
         <div className="mt-3 flex flex-wrap gap-2">
           {['Classical music', 'Slow mornings'].map((interest) => (
             <span key={interest} className="rounded-full border border-saffron-400/60 px-3 py-1.5 text-xs text-lotus-plum">
@@ -195,16 +195,16 @@ export function ChatVisual() {
     <div className="flex flex-col gap-5">
       <div className="flex items-center justify-between rounded-2xl bg-lotus-petal px-5 py-4">
         <div>
-          <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-lotus-mauve">Focus window</p>
+          <p className="text-xs font-medium text-lotus-mauve">Focus window</p>
           <p className="mt-1 font-serif text-2xl tabular-nums text-lotus-brown">{formatRemaining(remaining)}</p>
         </div>
         <p className="max-w-[9rem] text-right text-[11px] leading-snug text-lotus-plum">Followed by a mandatory cooling period</p>
       </div>
-      <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-lotus-mauve">Five-question icebreaker</p>
+      <p className="text-xs font-medium text-lotus-mauve">Five-question icebreaker</p>
       <ol className="space-y-2.5">
         {QUESTIONS.map((question, index) => (
           <li key={question} className="flex gap-3 rounded-xl border border-lotus-blush/70 bg-lotus-white px-4 py-3 text-sm text-lotus-brown">
-            <span className="font-serif italic text-kumkum-600">{index + 1}</span>
+            <span className="font-medium text-kumkum-600">{index + 1}</span>
             <span className="leading-snug">{question}</span>
           </li>
         ))}

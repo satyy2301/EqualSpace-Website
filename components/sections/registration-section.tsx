@@ -18,7 +18,7 @@ export function RegistrationSection() {
         <Reveal className="flex min-h-0 flex-col lg:w-[42%] lg:max-w-xl lg:shrink-0">
           <p className={darkEyebrow}>Your invitation awaits</p>
           <h2 className={`${darkSectionHeading} mt-6`}>
-            Some connections are worth <em className="italic text-lotus-rose">waiting for.</em>
+            Some connections are worth <span className="text-lotus-rose">waiting for.</span>
           </h2>
           <p className={`${darkSectionBody} mt-6 max-w-md`}>
             Be among the first to experience a more intentional way of finding love.

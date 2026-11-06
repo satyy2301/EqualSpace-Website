@@ -113,7 +113,7 @@ export function LotusSection() {
           <div className="lg:col-span-5 lg:col-start-8">
             <p className={eyebrow}>How a match opens</p>
             <h2 className={`${sectionHeading} mt-6`}>
-              A connection opens in <em className="italic text-lotus-plum">three steps.</em>
+              A connection opens in <span className="text-lotus-plum">three steps.</span>
             </h2>
 
             <ol className="mt-12 space-y-4">
@@ -131,7 +131,7 @@ export function LotusSection() {
                       }`}
                     >
                       <span
-                        className={`font-serif text-2xl italic transition-colors duration-700 ${
+                        className={`text-lg font-medium transition-colors duration-700 ${
                           active ? 'text-lotus-rose' : 'text-lotus-muted'
                         }`}
                         aria-hidden="true"
@@ -140,13 +140,13 @@ export function LotusSection() {
                       </span>
                       <span>
                         <span
-                          className={`block text-[12px] font-semibold uppercase tracking-[0.28em] transition-colors duration-700 ${
+                          className={`block text-lg font-medium transition-colors duration-700 ${
                             active ? 'text-lotus-brown' : 'text-lotus-mauve'
                           }`}
                         >
                           {step.title}
                         </span>
-                        <span className="mt-2 block font-serif text-2xl leading-snug text-lotus-plum">{step.body}</span>
+                        <span className="mt-1 block text-base leading-relaxed text-lotus-plum">{step.body}</span>
                       </span>
                     </button>
                   </li>

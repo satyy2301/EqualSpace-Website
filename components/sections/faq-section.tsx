@@ -53,14 +53,14 @@ export function FaqSection() {
         <div className="lg:col-span-4 lg:sticky lg:top-32 lg:self-start">
           <p className={eyebrow}>Questions</p>
           <h2 className={`${sectionHeading} mt-6`}>
-            A few things worth <em className="italic text-lotus-plum">knowing.</em>
+            A few things worth <span className="text-lotus-plum">knowing.</span>
           </h2>
         </div>
 
         <Accordion type="single" collapsible className="lg:col-span-7 lg:col-start-6">
           {FAQS.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index}`} className="border-lotus-blush">
-              <AccordionTrigger className="py-7 text-left font-serif text-2xl font-normal text-lotus-brown hover:no-underline sm:text-[1.7rem]">
+              <AccordionTrigger className="py-7 text-left text-xl font-medium leading-snug text-lotus-brown hover:no-underline sm:text-2xl">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent className="text-base leading-[1.8] text-lotus-plum">

@@ -47,12 +47,12 @@ function FeatureCard({
         >
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
-        <p className={`text-[11px] font-semibold uppercase tracking-[0.24em] ${highlight ? 'text-saffron-100' : 'text-lotus-blush'}`}>
+        <p className={`text-[15px] font-medium ${highlight ? 'text-saffron-100' : 'text-lotus-blush'}`}>
           {label}
         </p>
       </div>
 
-      <h3 className="mt-8 font-serif text-3xl font-medium leading-[1.15] text-lotus-white sm:text-4xl">{title}</h3>
+      <h3 className="mt-8 text-2xl font-medium leading-snug text-lotus-white sm:text-3xl">{title}</h3>
       <p className="mt-5 text-base leading-[1.75] text-lotus-blush/90">{body}</p>
 
       <ul className="mt-8 space-y-3 border-t border-white/10 pt-8">
@@ -76,9 +76,9 @@ export function TwoWaysSection() {
       <div className={darkSectionOverlay} aria-hidden="true" />
       <div className={`${sectionWrap}`}>
         <Reveal className="mx-auto max-w-3xl text-center">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-saffron-100">Two ways to connect</p>
+          <p className="text-[15px] font-medium text-saffron-100">Two ways to connect</p>
           <h2 className="mt-6 font-serif text-4xl font-medium leading-[1.12] text-lotus-white sm:text-5xl lg:text-6xl">
-            Find your match, or let your <em className="italic text-lotus-rose">thoughts</em> find you.
+            Find your match, or let your <span className="text-lotus-rose">thoughts</span> find you.
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-[1.7] text-lotus-blush/90">
             Choose the pace that feels right. Both paths lead to people who share your values. Built for people who want a few real conversations, not a full inbox.
@@ -113,7 +113,7 @@ export function TwoWaysSection() {
               <Leaf className="h-5 w-5" aria-hidden="true" />
             </span>
             <div>
-              <p className="font-serif text-2xl font-medium text-lotus-white">Overwhelm protection</p>
+              <p className="text-xl font-medium text-lotus-white">Overwhelm protection</p>
               <p className="mt-2 text-[15px] leading-relaxed text-lotus-blush/90">
                 You can post <Mark onDark>once or twice a day</Mark>, and <Mark onDark>likes are not shown in public</Mark>. Popular posts are filtered so authors only see their <Mark onDark>top 10 to 12</Mark> compatible matches. Your inbox stays calm, and nothing feels like a crowd.
               </p>

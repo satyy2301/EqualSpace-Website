@@ -101,7 +101,7 @@ export function HeroSection() {
             style={{ animationDelay: '1000ms' }}
           >
             <span className="font-serif text-3xl leading-none text-kumkum-600">1:1</span>
-            <span className="mt-1 text-[9px] font-semibold uppercase tracking-[0.2em] text-lotus-mauve">Balanced</span>
+            <span className="mt-1 text-xs font-medium text-lotus-mauve">Balanced</span>
           </div>
 
           <div className="absolute bottom-[4%] right-[2%] z-20 hidden animate-fade-up sm:block" style={{ animationDelay: '1500ms' }}>
@@ -119,7 +119,7 @@ export function HeroSection() {
             <dd className="font-serif text-[3.25rem] font-normal tabular-nums lining-nums leading-none tracking-[0.06em] text-lotus-brown/90 sm:text-[3.75rem]">
               {item.value}
             </dd>
-            <dt className="mt-3 text-[11px] font-bold uppercase tracking-[0.14em] text-lotus-brown/85 sm:text-xs">
+            <dt className="mt-3 text-[15px] font-medium text-lotus-brown/85">
               {item.label}
             </dt>
             <dd className="mt-3 max-w-xs text-[15px] font-medium leading-snug text-lotus-plum sm:text-base sm:leading-relaxed">

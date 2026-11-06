@@ -23,12 +23,12 @@ export function LegalDocument({
         <div className="mt-14 space-y-10">
           {sections.map((section) => (
             <section key={section.heading} className="border-t border-lotus-blush pt-8">
-              <h2 className="font-serif text-3xl font-normal text-lotus-brown">{section.heading}</h2>
+              <h2 className="text-2xl font-medium text-lotus-brown">{section.heading}</h2>
               <p className="mt-4 text-base leading-[1.8] text-lotus-plum">{section.body}</p>
             </section>
           ))}
         </div>
-        <Link href="/" className="mt-16 inline-block text-[12px] font-semibold uppercase tracking-[0.2em] text-lotus-plum underline underline-offset-8 hover:text-lotus-mauve">
+        <Link href="/" className="mt-16 inline-block text-[15px] font-medium text-lotus-plum underline underline-offset-4 hover:text-lotus-mauve">
           Return to EqualSpace
         </Link>
       </div>
