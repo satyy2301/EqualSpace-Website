@@ -54,41 +54,47 @@ function formatRemaining(ms: number) {
   return [hours, minutes, seconds].map((part) => String(part).padStart(2, '0')).join(':');
 }
 
-function QueueSide({ label, count }: { label: string; count: number }) {
+function QueueSide({ label, count, compact = false }: { label: string; count: number; compact?: boolean }) {
   return (
     <div>
-      <p className="text-sm font-medium text-lotus-mauve">{label}</p>
-      <div className="mt-4 grid grid-cols-3 gap-2.5">
+      <p className={compact ? 'text-[10px] font-medium text-lotus-mauve' : 'text-sm font-medium text-lotus-mauve'}>{label}</p>
+      <div className={compact ? 'mt-1.5 grid grid-cols-3 gap-1' : 'mt-4 grid grid-cols-3 gap-2.5'}>
         {Array.from({ length: count }, (_, index) => (
           <span key={index} className="aspect-square rounded-full bg-lotus-petal ring-1 ring-lotus-blush" aria-hidden="true" />
         ))}
       </div>
-      <p className="mt-3 text-sm text-lotus-plum">{count} members</p>
+      {compact ? null : <p className="mt-3 text-sm text-lotus-plum">{count} members</p>}
     </div>
   );
 }
 
-export function BalanceVisual() {
+export function BalanceVisual({ compact = false }: { compact?: boolean }) {
   return (
-    <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-4 sm:gap-8">
-      <QueueSide label="Women" count={6} />
-      <div className="flex flex-col items-center gap-3">
-        <span className="font-serif text-4xl text-lotus-brown">1:1</span>
-        <span className="rounded-full bg-saffron-100 px-3 py-1 text-xs font-medium text-lotus-plum">
+    <div className={`grid grid-cols-[1fr_auto_1fr] items-center ${compact ? 'gap-2' : 'gap-4 sm:gap-8'}`}>
+      <QueueSide label="Women" count={compact ? 3 : 6} compact={compact} />
+      <div className={`flex flex-col items-center ${compact ? 'gap-1' : 'gap-3'}`}>
+        <span className={compact ? 'font-serif text-xl text-lotus-brown' : 'font-serif text-4xl text-lotus-brown'}>1:1</span>
+        <span className={`rounded-full bg-saffron-100 font-medium text-lotus-plum ${compact ? 'px-2 py-0.5 text-[10px]' : 'px-3 py-1 text-xs'}`}>
           Balanced
         </span>
       </div>
-      <QueueSide label="Men" count={6} />
+      <QueueSide label="Men" count={compact ? 3 : 6} compact={compact} />
     </div>
   );
 }
 
-export function PicksVisual() {
+export function PicksVisual({ compact = false }: { compact?: boolean }) {
   const [index, setIndex] = useState(0);
 
+  useEffect(() => {
+    if (!compact) return;
+    const timer = setInterval(() => setIndex((current) => (current + 1) % PICKS.length), 2800);
+    return () => clearInterval(timer);
+  }, [compact]);
+
   return (
-    <div className="flex flex-col items-center gap-6">
-      <div className="relative h-[300px] w-full max-w-[260px]">
+    <div className={`flex flex-col items-center ${compact ? 'gap-2' : 'gap-6'}`}>
+      <div className={`relative w-full ${compact ? 'h-28 max-w-[120px]' : 'h-[300px] max-w-[260px]'}`}>
         {PICKS.map((pick, position) => {
           const offset = (position - index + PICKS.length) % PICKS.length;
           if (offset > 1) return null;
@@ -102,26 +108,29 @@ export function PicksVisual() {
                 opacity: 1 - offset * 0.35,
               }}
             >
-              <div className="relative h-[60%]">
+              <div className={`relative ${compact ? 'h-[68%]' : 'h-[60%]'}`}>
                 <Image src={pick.image} alt={`${pick.name}, sample profile`} fill sizes="260px" className="object-cover" />
               </div>
-              <div className="p-5">
-                <p className="font-serif text-2xl text-lotus-brown">
+              <div className={compact ? 'px-2 py-1.5' : 'p-5'}>
+                <p className={compact ? 'font-serif text-sm leading-none text-lotus-brown' : 'font-serif text-2xl text-lotus-brown'}>
                   {pick.name}, {pick.age}
                 </p>
-                <p className="mt-1 text-xs font-medium text-lotus-mauve">{pick.city}</p>
-                <div className="mt-3 flex flex-wrap gap-1.5">
-                  {pick.interests.map((interest) => (
-                    <span key={interest} className="rounded-full bg-saffron-100 px-2.5 py-1 text-[10px] text-lotus-plum">
-                      {interest}
-                    </span>
-                  ))}
-                </div>
+                {compact ? null : <p className="mt-1 text-xs font-medium text-lotus-mauve">{pick.city}</p>}
+                {compact ? null : (
+                  <div className="mt-3 flex flex-wrap gap-1.5">
+                    {pick.interests.map((interest) => (
+                      <span key={interest} className="rounded-full bg-saffron-100 px-2.5 py-1 text-[10px] text-lotus-plum">
+                        {interest}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </article>
           );
         })}
       </div>
+      {compact ? null : (
       <div className="flex w-full max-w-[260px] items-center justify-between">
         <p className="text-xs text-lotus-plum">
           {index + 1} of {PICKS.length} sample profiles
@@ -135,6 +144,7 @@ export function PicksVisual() {
           <ChevronRight className="h-3.5 w-3.5" aria-hidden="true" />
         </button>
       </div>
+      )}
     </div>
   );
 }
@@ -182,7 +192,7 @@ export function CompatibilityVisual() {
   );
 }
 
-export function ChatVisual() {
+export function ChatVisual({ compact = false }: { compact?: boolean }) {
   const [remaining, setRemaining] = useState(WINDOW_MS);
 
   useEffect(() => {
@@ -192,23 +202,29 @@ export function ChatVisual() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-5">
-      <div className="flex items-center justify-between rounded-2xl bg-lotus-petal px-5 py-4">
+    <div className={compact ? 'flex flex-col' : 'flex flex-col gap-5'}>
+      <div className={`flex items-center justify-between rounded-2xl bg-lotus-petal ${compact ? 'px-3 py-2' : 'px-5 py-4'}`}>
         <div>
           <p className="text-xs font-medium text-lotus-mauve">Focus window</p>
-          <p className="mt-1 font-serif text-2xl tabular-nums text-lotus-brown">{formatRemaining(remaining)}</p>
+          <p className={`mt-1 font-serif tabular-nums text-lotus-brown ${compact ? 'text-lg' : 'text-2xl'}`}>{formatRemaining(remaining)}</p>
         </div>
-        <p className="max-w-[9rem] text-right text-[11px] leading-snug text-lotus-plum">Followed by a mandatory cooling period</p>
+        {compact ? null : (
+          <p className="max-w-[9rem] text-right text-[11px] leading-snug text-lotus-plum">Followed by a mandatory cooling period</p>
+        )}
       </div>
-      <p className="text-xs font-medium text-lotus-mauve">Five-question icebreaker</p>
-      <ol className="space-y-2.5">
-        {QUESTIONS.map((question, index) => (
-          <li key={question} className="flex gap-3 rounded-xl border border-lotus-blush/70 bg-lotus-white px-4 py-3 text-sm text-lotus-brown">
-            <span className="font-medium text-kumkum-600">{index + 1}</span>
-            <span className="leading-snug">{question}</span>
-          </li>
-        ))}
-      </ol>
+      {compact ? null : (
+        <>
+          <p className="text-xs font-medium text-lotus-mauve">Five-question icebreaker</p>
+          <ol className="space-y-2.5">
+            {QUESTIONS.map((question, index) => (
+              <li key={question} className="flex gap-3 rounded-xl border border-lotus-blush/70 bg-lotus-white px-4 py-3 text-sm text-lotus-brown">
+                <span className="font-medium text-kumkum-600">{index + 1}</span>
+                <span className="leading-snug">{question}</span>
+              </li>
+            ))}
+          </ol>
+        </>
+      )}
     </div>
   );
 }
