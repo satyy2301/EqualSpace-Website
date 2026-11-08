@@ -21,7 +21,7 @@ export function RegistrationSection() {
             Some connections are worth <span className="text-lotus-rose">waiting for.</span>
           </h2>
           <p className={`${darkSectionBody} mt-6 max-w-md`}>
-            Be among the first to experience a more intentional way of finding love.
+            Be among the first in. A calmer way to meet someone who wants the same thing you do.
           </p>
           <div className="relative mt-8 hidden min-h-[10rem] flex-1 overflow-hidden rounded-[200px_200px_28px_28px] shadow-[0_40px_80px_-44px_rgba(0,0,0,0.45)] ring-1 ring-white/15 lg:block">
             <Image

@@ -6,7 +6,8 @@ import { Mark } from '@/components/ui/mark';
 import { ctaPrimary, ctaSecondary, eyebrow } from '@/lib/styles';
 
 const HEADLINE = [
-  { text: 'Dating', emphasis: false },
+  { text: 'Meet', emphasis: false },
+  { text: 'people', emphasis: false },
   { text: 'on', emphasis: false },
   { text: 'equal', emphasis: true },
   { text: 'footing,', emphasis: true },
@@ -14,9 +15,9 @@ const HEADLINE = [
 ];
 
 const INDICATORS = [
-  { value: '1:1', label: 'City balance', detail: 'Men and women stay in exact balance in every city, so no side is overwhelmed.' },
-  { value: '3–5', label: 'Curated picks daily', detail: 'Delivered at 8:00 AM, chosen for real compatibility rather than endless swiping.' },
-  { value: '5', label: 'Active conversations, max', detail: 'A hard limit that keeps every chat focused and every reply meaningful.' },
+  { value: '1:1', label: 'City balance', detail: 'Equal slots for women and men. No side is flooded.' },
+  { value: '3–5', label: 'Morning introductions', detail: 'At 8:00 AM. Chosen for you — no swipe pile.' },
+  { value: '5', label: 'Chats, maximum', detail: 'A hard cap so every conversation gets a real reply.' },
 ];
 
 export function HeroSection() {
@@ -55,7 +56,7 @@ export function HeroSection() {
             className="mt-8 max-w-xl animate-fade-up text-lg leading-[1.7] text-lotus-plum sm:text-xl"
             style={{ animationDelay: '1100ms' }}
           >
-            Match with curated profiles, or share your thoughts anonymously and let genuine connections come to you. Every city keeps a strict <Mark>1:1</Mark> ratio, with an equal number of slots for women and men.
+            A few introductions each morning — or share a thought and let someone find you. Partnership, marriage, or taking it slow. Every city stays a strict <Mark>1:1</Mark>, women and men.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: '1350ms' }}>

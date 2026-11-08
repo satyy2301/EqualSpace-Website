@@ -9,7 +9,7 @@ const FAQS: { question: ReactNode; answer: ReactNode }[] = [
   {
     question: 'What is EqualSpace?',
     answer:
-      'EqualSpace is a dating app for adults in India. You do not swipe through hundreds of people. You get a few introductions each morning, or you post an anonymous thought and let someone come to you.',
+      'EqualSpace is for adults in India who want to meet someone with intention. You do not swipe through hundreds of people. You get a few introductions each morning, or you post an anonymous thought and let someone come to you.',
   },
   {
     question: 'How does a match start?',
