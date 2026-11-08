@@ -72,13 +72,19 @@ const BOUNDARIES = ['Slow replies preferred', 'Low battery today', 'Open to a ca
 
 function VerificationShield() {
   return (
-    <div className="relative mx-auto flex h-64 w-64 items-center justify-center [perspective:900px]">
-      <div className="absolute inset-6 rounded-full bg-lotus-rose/20 blur-3xl" aria-hidden="true" />
-      <div className="relative flex h-44 w-44 items-center justify-center rounded-[44px] bg-lotus-white shadow-[0_40px_60px_-30px_rgba(114,84,93,0.5)] ring-1 ring-saffron-400/50 transition-transform duration-700 ease-out [transform-style:preserve-3d] hover:[transform:rotateY(18deg)_rotateX(-8deg)]">
-        <ShieldCheck className="h-16 w-16 text-kumkum-600" strokeWidth={1.25} aria-hidden="true" />
+    <div className="relative mx-auto flex flex-col items-center [perspective:900px]">
+      <div className="relative flex h-56 w-56 items-center justify-center sm:h-64 sm:w-64">
+        <div className="absolute inset-6 rounded-full bg-lotus-rose/20 blur-3xl" aria-hidden="true" />
+        <div className="relative flex h-44 w-44 items-center justify-center rounded-[44px] bg-lotus-white shadow-[0_40px_60px_-30px_rgba(114,84,93,0.5)] ring-1 ring-saffron-400/50 transition-transform duration-700 ease-out [transform-style:preserve-3d] hover:[transform:rotateY(18deg)_rotateX(-8deg)]">
+          <ShieldCheck className="h-16 w-16 text-kumkum-600" strokeWidth={1.25} aria-hidden="true" />
+        </div>
       </div>
-      <p className="absolute bottom-0 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-lotus-white shadow-sm">
-        <Mark onDark>Aadhaar</Mark> verified through <Mark onDark>DigiLocker</Mark>
+      <p className="mt-1 whitespace-nowrap rounded-full border border-white/25 bg-white/15 px-5 py-2 text-center text-[13px] font-medium leading-none tracking-wide text-lotus-white backdrop-blur-sm sm:text-sm">
+        Verified with <Mark onDark>Aadhaar</Mark>
+        <span className="mx-2 text-white/40" aria-hidden="true">
+          ·
+        </span>
+        <Mark onDark>DigiLocker</Mark>
       </p>
     </div>
   );

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { Sunrise, Layers } from 'lucide-react';
 import { Reveal } from '@/components/ui/reveal';
-import { eyebrow, sectionHeading, sectionWrap } from '@/lib/styles';
+import { darkEyebrow, darkSectionBase, darkSectionHeading, darkSectionOverlay, sectionWrap } from '@/lib/styles';
 
 const MORNING_PICKS = [
   {
@@ -99,7 +99,7 @@ function ThoughtlineColumn() {
       </div>
       <h3 className="mt-8 text-2xl font-medium leading-snug text-lotus-brown sm:text-3xl">Thoughtline, a quiet text feed</h3>
       <p className="mt-4 text-base leading-[1.75] text-lotus-plum">
-        Text-first posts with no public comments. When a post gains traction, only the best matches see it.
+        Post once or twice a day. Likes stay private. When a post gains traction, only the 10–12 best matches see it.
       </p>
 
       <article className="mt-8 rounded-2xl bg-lotus-white p-6 shadow-[0_20px_40px_-30px_rgba(114,84,93,0.4)]">
@@ -146,12 +146,13 @@ function ThoughtlineColumn() {
 
 export function MatchingSection() {
   return (
-    <section id="matching" className="scroll-mt-20 bg-lotus-ivory pt-10 pb-20 sm:pt-12 sm:pb-24">
+    <section id="matching" className={`${darkSectionBase} py-20 sm:py-28`}>
+      <div className={darkSectionOverlay} aria-hidden="true" />
       <div className={sectionWrap}>
         <div className="max-w-3xl">
-          <p className={eyebrow}>Two ways to connect</p>
-          <h2 className={`${sectionHeading} mt-5`}>
-            Two ways to find your <span className="text-kumkum-600">people.</span>
+          <p className={darkEyebrow}>Two ways to connect</p>
+          <h2 className={`${darkSectionHeading} mt-5`}>
+            Morning introductions, or a <span className="text-lotus-rose">thought</span> that finds you.
           </h2>
         </div>
 

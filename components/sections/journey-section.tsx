@@ -11,7 +11,7 @@ const STEPS = [
     title: 'You join your city',
     body: (
       <>
-        Each city keeps the same number of women and men. If one side is full, you wait until a place opens. You are not added to a crowd. When you create your profile, you also add your birth date, birth time, and birth place, and you take a short <Mark>MBTI</Mark> test. From that, EqualSpace uses your <Mark>sun, moon, and rising signs</Mark>, your <Mark>life-path number</Mark>, and your <Mark>MBTI</Mark> type to help choose your matches.
+        Each city keeps the same number of women and men. If one side is full, you wait until a place opens. You are not added to a crowd.
       </>
     ),
     Visual: BalanceVisual,

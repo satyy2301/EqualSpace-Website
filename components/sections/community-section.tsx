@@ -20,7 +20,7 @@ const VOICES: Voice[] = [
     city: 'Mumbai',
   },
   {
-    quote: "Leading with values and verification first? That's the dating app idea I've been waiting for.",
+    quote: "Leading with values and verification first? That's how I actually want to meet someone.",
     name: 'Meera',
     age: 27,
     city: 'Delhi',
