@@ -6,9 +6,9 @@ const fontStyles = {
   '--font-sans': "'Inter', system-ui, sans-serif",
 } as React.CSSProperties;
 
-const title = 'EqualSpace | Where genuine love blooms, naturally';
+const title = 'EqualSpace | Meet people on equal footing';
 const description =
-  'EqualSpace is an intentional dating experience built around emotional compatibility, mutual respect, and meaningful connection. Reserve your early access.';
+  'A few introductions each morning, or share a thought and let someone find you. Balanced cities for adults in India. Reserve early access.';
 const image = 'https://images.pexels.com/photos/5163532/pexels-photo-5163532.jpeg?auto=compress&cs=tinysrgb&w=1200';
 
 export const metadata: Metadata = {
