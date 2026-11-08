@@ -4,8 +4,6 @@ import { eyebrow } from '@/lib/styles';
 
 const NAV_LINKS = [
   { href: '#journey', label: 'How It Works' },
-  { href: '#experience', label: 'The Experience' },
-  { href: '#community', label: 'Community' },
   { href: '#early-access', label: 'Early Access' },
   { href: '#faq', label: 'FAQ' },
 ];

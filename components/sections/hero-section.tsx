@@ -2,16 +2,14 @@ import Image from 'next/image';
 import { ProfilePreview } from '@/components/ui/profile-preview';
 import { HeroBackdrop } from '@/components/ui/hero-backdrop';
 import { TiltCard } from '@/components/ui/tilt-card';
-import { Mark } from '@/components/ui/mark';
 import { ctaPrimary, ctaSecondary, eyebrow } from '@/lib/styles';
 
 const HEADLINE = [
   { text: 'Meet', emphasis: false },
   { text: 'people', emphasis: false },
-  { text: 'on', emphasis: false },
-  { text: 'equal', emphasis: true },
-  { text: 'footing,', emphasis: true },
-  { text: 'finally.', emphasis: false },
+  { text: 'chosen', emphasis: false },
+  { text: 'for', emphasis: false },
+  { text: 'you.', emphasis: true },
 ];
 
 const INDICATORS = [
@@ -56,7 +54,7 @@ export function HeroSection() {
             className="mt-8 max-w-xl animate-fade-up text-lg leading-[1.7] text-lotus-plum sm:text-xl"
             style={{ animationDelay: '1100ms' }}
           >
-            A few introductions each morning — or share a thought and let someone find you. Partnership, marriage, or taking it slow. Every city stays a strict <Mark>1:1</Mark>, women and men.
+            Each morning you get a few introductions that fit your life and what you&apos;re hoping for. You can be here for partnership, marriage, or taking it slow. Every city keeps the same number of women and men.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: '1350ms' }}>
